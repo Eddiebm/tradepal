@@ -1,0 +1,25 @@
+{
+  "repo": "tradepal",
+  "run_at": "2026-05-23 08:25",
+  "stack": [
+    "Next.js",
+    "PostgreSQL",
+    "React",
+    "Twilio"
+  ],
+  "env_vars_found": [
+    "BUILD_MODE"
+  ],
+  "secret_warnings_count": 1,
+  "leak_findings": [
+    {
+      "severity": "HIGH",
+      "category": "gitignore-gap",
+      "description": ".gitignore exists but does not exclude .env files",
+      "location": ".gitignore",
+      "fix": "echo \"\\n.env\\n.env.*\\n!.env.example\\n!.env.sample\" >> .gitignore"
+    }
+  ],
+  "files_scanned": 39,
+  "cost_usd": 0.2119
+}
